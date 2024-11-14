@@ -1,1 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
+.dynamic-banner {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    animation: changeBackground 10s infinite alternate;
+}
+
+@keyframes changeBackground {
+    0% { background-color: #4CAF50; }
+    50% { background-color: #2196F3; }
+    100% { background-color: #FF5722; }
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.article-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.article-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
