@@ -1,44 +1,107 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ניוזלטר מחלקת לוגיסטיקה</title>
-    <link rel="stylesheet" href="style.css">
+    <title>חטיבה 4 וחטיבה 679</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            gap: 50px;
+        }
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+            border: 2px solid #004d00; /* ירוק צה"לי */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .box:hover {
+            background-color: #e6e6e6;
+        }
+        .box img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        .small-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .small-box {
+            width: 150px;
+            height: 150px;
+            background-color: #fff;
+            border: 2px solid #004d00; /* ירוק צה"לי */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .small-box:hover {
+            background-color: #e6e6e6;
+        }
+        .tank-image {
+            width: 200px;
+            height: auto;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <header class="dynamic-banner">
-        <h1>ניוזלטר מחלקת לוגיסטיקה</h1>
-        <p>תאריך: נובמבר 2024</p>
-    </header>
-    
-    <section class="articles">
-        <div class="article-card">
-            <h2>כתבה 1</h2>
-            <p>תקציר הכתבה הראשונה</p>
-            <img src="image1.jpg" alt="תמונה לכתבה 1">
-        </div>
-        <div class="article-card">
-            <h2>כתבה 2</h2>
-            <p>תקציר הכתבה השנייה</p>
-            <img src="image2.jpg" alt="תמונה לכתבה 2">
-        </div>
-        <div class="article-card">
-            <h2>כתבה 3</h2>
-            <p>תקציר הכתבה השלישית</p>
-            <img src="image3.jpg" alt="תמונה לכתבה 3">
-        </div>
-        <div class="article-card">
-            <h2>כתבה 4</h2>
-            <p>תקציר הכתבה הרביעית</p>
-            <img src="image4.jpg" alt="תמונה לכתבה 4">
-        </div>
-    </section>
 
-    <footer>
-        <p>© כל הזכויות שמורות למחלקת לוגיסטיקה</p>
-    </footer>
+<div id="main-page" class="container">
+    <!-- חטיבה 4 -->
+    <div class="box" onclick="openPage('4')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/IDF_4th_Brigade_Emblem.svg" alt="סמל חטיבה 4">
+        <div>חטיבה 4</div>
+    </div>
 
-    <script src="script.js"></script>
+    <!-- חטיבה 679 -->
+    <div class="box" onclick="openPage('679')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/IDF_679th_Brigade_Emblem.svg" alt="סמל חטיבה 679">
+        <div>חטיבה 679</div>
+    </div>
+</div>
+
+<div id="sub-page" class="small-container" style="display:none;">
+    <div class="small-box">ויקיפדיה</div>
+    <div class="small-box">מבנה ארגוני</div>
+    <div class="small-box">מה אנחנו יודעים עד כה</div>
+    <div class="small-box">כללי</div>
+</div>
+
+<!-- תמונה של טנק מרכבה סימן 4 -->
+<div class="tank-image">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Merkava_Mk4_with_ERA.jpg" alt="טנק מרכבה סימן 4">
+</div>
+
+<script>
+    function openPage(brigade) {
+        document.getElementById('main-page').style.display = 'none';
+        document.getElementById('sub-page').style.display = 'flex';
+    }
+</script>
+
 </body>
 </html>
